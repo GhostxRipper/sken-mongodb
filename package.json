@@ -3,14 +3,19 @@
   "version": "1.0.0",
   "description": "mongodb factory and driver for sken application",
   "main": "index.js",
+  "repository": "git@github.com:GhostxRipper/sken-mongodb.git",
   "author": "Yann AMSELLEM <yann_ams@icloud.com>",
   "license": "MIT",
   "dependencies": {
     "debug": "^2.6.3",
-    "mongodb": "^2.2.24"
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.24",
+    "sken-config-middleware": "git+ssh://git@github.com/GhostxRipper/sken-config-middleware.git"
   },
   "peerDependencies": {
     "debug": "^2.6.3",
-    "mongodb": "^2.2.24"
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.24",
+    "sken-config-middleware": "git+ssh://git@github.com/GhostxRipper/sken-config-middleware.git"
   }
 }

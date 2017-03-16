@@ -32,6 +32,14 @@ isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
 
+lodash@^4.17.4:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
+moment@^2.17.1:
+  version "2.17.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.17.1.tgz#fed9506063f36b10f066c8b59a144d7faebe1d82"
+
 mongodb-core@2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.8.tgz#b33e0370d0a59d97b6cb1ec610527be9e95ca2c0"
@@ -81,6 +89,12 @@ resolve-from@^2.0.0:
 semver@^5.1.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
+
+"sken-config-middleware@git+ssh://git@github.com/GhostxRipper/sken-config-middleware.git":
+  version "1.0.0"
+  resolved "git+ssh://git@github.com/GhostxRipper/sken-config-middleware.git#53b15ef5b6904e99ecd9389936da25a552eb8c09"
+  dependencies:
+    moment "^2.17.1"
 
 string_decoder@~0.10.x:
   version "0.10.31"

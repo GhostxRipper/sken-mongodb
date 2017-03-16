@@ -1,8 +1,8 @@
 /* Service requiring */
 const MongoClient = require('mongodb').MongoClient;
 const debug = require('debug')('Sken:MongoDB');
-const MongoFactory = require(global.paths.vendors).factories.MongoFactory;
-const Driver = require(global.paths.vendors).driver;
+const MongoFactory = require('./').MongoFactory;
+const Driver = require('sken-config-middleware').Driver;
 
 /* Object declaration */
 let configuration = null;

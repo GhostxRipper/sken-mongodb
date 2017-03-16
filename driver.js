@@ -17,14 +17,9 @@ class MongoDB extends Driver {
   }
 
   static _init () {
-    let url = `mongodb://${configuration.host}:${configuration.port}/${configuration.schema.name}`;
+    const url = `mongodb://${configuration.host}:${configuration.port}/${configuration.schema.name}`;
 
-    let promise = MongoClient.connect(url, {
-      db: configuration.schema.options,
-      server: {
-        autoReconnect: configuration.server_options.auto_reconnect
-      }
-    })
+    let promise = MongoClient.connect(url, configuration.schema.options)
     .then((_db) => {
       db = _db;
       debug(`Connected to database "${configuration.schema.name}"`);
@@ -37,7 +32,7 @@ class MongoDB extends Driver {
         db = null;
       }); */
 
-      let factories = this.getFactoriesDirectories();
+      const factories = this.getFactoriesDirectories();
       let promises = [Promise.resolve()];
 
       db.collections = {};

@@ -1,2 +1,2 @@
-module.exports = require('./driver');
+exports.Driver = require('./driver');
 exports.MongoFactory = require('./factory');

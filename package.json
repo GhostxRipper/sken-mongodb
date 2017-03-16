@@ -1,0 +1,16 @@
+{
+  "name": "sken-mongodb",
+  "version": "1.0.0",
+  "description": "mongodb factory and driver for sken application",
+  "main": "index.js",
+  "author": "Yann AMSELLEM <yann_ams@icloud.com>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.6.3",
+    "mongodb": "^2.2.24"
+  },
+  "peerDependencies": {
+    "debug": "^2.6.3",
+    "mongodb": "^2.2.24"
+  }
+}

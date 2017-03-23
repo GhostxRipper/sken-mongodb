@@ -1,7 +1,7 @@
 /* Service requiring */
 const MongoClient = require('mongodb').MongoClient;
 const debug = require('debug')('Sken:MongoDB');
-const MongoFactory = require('./').MongoFactory;
+const MongoFactory = require('./factory');
 const Driver = require('sken-config-middleware').Driver;
 
 /* Object declaration */
@@ -19,7 +19,7 @@ class MongoDB extends Driver {
   static _init () {
     const url = `mongodb://${configuration.host}:${configuration.port}/${configuration.schema.name}`;
 
-    let promise = MongoClient.connect(url, configuration.schema.options)
+    const promise = MongoClient.connect(url, configuration.schema.options)
     .then((_db) => {
       db = _db;
       debug(`Connected to database "${configuration.schema.name}"`);
@@ -39,9 +39,9 @@ class MongoDB extends Driver {
 
       factories.forEach((file) => {
         try {
-          let FactoryClass = require(file);
+          const FactoryClass = require(file);
           if (Object.getPrototypeOf(FactoryClass) === MongoFactory) {
-            let factory = new FactoryClass();
+            const factory = new FactoryClass();
             promises.push(factory.init(_db));
             db.collections[factory._name] = factory;
           }
